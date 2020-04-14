@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="scripts/angular.min.js"></script>
+    <script src="app.module.js"></script>
+    <title>Order Form App</title>
+</head>
+
+<body ng-app="myApp" ng-controller="Cntrl">
+    <div class="wrapper">
+        <h2>Services</h2>
+        <ul  class="list"> 
+            <li ng-repeat=" x in data" class="item"  ng-click="toggle= !toggle;myFunc($event)" 
+            ng-class="{'green':toggle}" ng-value="{{x.price}}">
+            {{x.name}} <span>{{x.price | currency}}</span>
+            </li>
+        </ul>
+        <hr>
+        <p class="total">Total:  <span>{{total | currency}}</span> </p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  $abs:absolute;
+  $center:center;
+  $blue:rgb(50, 152, 199);
+  $trnsp:transparent;
+  $max:100%;
+ 
+  .container {
+    margin: 100px auto;
+    max-width: 280px;
+    position: relative;
+  }
+  
+  .text {
+    text-align:   $center;
+    max-width: $max;
+    padding:50px 0;
+    font-size:22px ;
+    color:rgb(50, 152, 199);
+    font-weight:600;
+    margin: 0 10px 0 0;
+  }
+  
+  .tooltip {
+    text-align: $center;
+    display: inline-block;
+    border: 6px solid $blue;
+    color:$blue;
+    font-size: 16px;
+    padding: 5px 0;
+    border-radius:2px;
+    box-sizing: border-box;
+    width: $max;
+    position:  $abs;
+  }
+  
+   #arrow::after {
+    content: "";
+    position:  $abs;
+    top: 45px;
+    left:calc(50% - 10px);
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: $blue $trnsp $trnsp $trnsp;
+  }
+  
+  .material-icons {
+    transform:rotate(-80deg);
+    padding:0 4px;
+  }

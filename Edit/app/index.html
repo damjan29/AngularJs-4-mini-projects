@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="scripts/angular.min.js"></script>
+    <script src="app.module.js"></script>
+    <title>App</title>
+</head>
+
+<body ng-controller="Cntrl">
+  <div class="container">
+      <p ng-show="showMe" id="arrow"><input ng-model="edit" class="tooltip"/></p>
+      <div class="text" ng-click="myFunc()">
+        <i class="material-icons" style="font-size:18px;">&#xe254;</i>{{edit}}
+      </div>
+  </div>
+
+</body>
+
+</html>

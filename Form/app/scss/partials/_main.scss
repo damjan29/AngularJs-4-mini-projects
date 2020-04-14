@@ -1,0 +1,60 @@
+body {
+    font-size:18px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+$flex:flex;
+$space:space-between;
+$blue: rgb(81, 152, 223);
+$pink:rgb(255, 77, 121);
+$green:rgb(72, 207, 72);
+$max:100%;
+$z: 0;
+
+@mixin flex{
+    display:$flex;
+    justify-content:$space;
+}
+
+.wrapper {
+    max-width: 350px;
+    margin:$z auto;
+    padding:10px 50px 20px;
+    background-color:$blue;
+    color:white;
+    h2 {
+        text-align: center;
+        font-family: Cursive;
+        font-weight:normal;
+    }
+}
+
+.list {
+    max-width: $max;
+    list-style-type: none;
+    padding:$z;
+    margin:$z;
+}
+
+.item {
+    @include flex;
+    padding:15px 20px;
+    max-width:$max;
+    background-color:$pink;
+    color:white;
+    margin:6px 0;
+    border-radius: 2px;
+    cursor:pointer;
+}
+
+
+.total{
+    @include flex;
+    padding:5px 20px;
+    margin:5px 0;
+}
+
+.green {
+    background-color:$green;
+}

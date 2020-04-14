@@ -1,0 +1,54 @@
+body {
+    padding:0;
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+$pink:rgb(252, 73, 118);
+$rd:3px;
+$uppr:uppercase;
+$size:16px;
+$white:white;
+$blue:rgb(12, 148, 172);
+
+nav {
+  background-color:$blue; 
+  max-width: 500px; 
+  margin:0 auto;
+  text-align: center;
+  border-radius: $rd;
+  display:flex;
+  
+ a {
+    color:$white;
+    display: block;
+    font-size:$size;
+    text-decoration:none;
+    text-transform:$uppr;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    flex:1;
+ }
+}
+
+.template {
+    text-align:center;
+    font-size:20px;
+    opacity:0.5;
+    font-weight:600;
+}
+nav.home .home,
+nav.projects .projects,
+nav.services .services,
+nav.contacts .contacts {
+    background-color:$pink;
+}
+
+.active {
+    color:$white;
+    background-color:$blue; 
+    padding:5px 10px;
+    border-radius: $rd;
+    text-transform: $uppr;
+    font-size:$size;
+}

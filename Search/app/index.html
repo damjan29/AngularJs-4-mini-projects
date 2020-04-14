@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="scripts/angular.min.js"></script>
+    <script src="app.module.js"></script>
+    <title>App</title>
+</head>
+
+<body ng-app="myApp" ng-controller="Cntrl">
+    <div class="wrapper">
+       
+        <div class="input-el">
+         <i class="fa fa-search"></i><input type="text" placeholder="Enter your search terms" 
+         ng-model="inputSearch.title">
+        </div>
+       
+      <div class="main-element" ng-repeat="name in names | filter:inputSearch">
+         <a href="{{name.url}}">
+             <div class="item">
+                 <img src="{{name.image}}"><span>{{name.title}}</span>
+             </div>
+        </a>
+     </div>
+
+    </div>
+
+</body>
+
+</html>
