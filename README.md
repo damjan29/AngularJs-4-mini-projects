@@ -1,5 +1,5 @@
 # AngularJs-4-simple-projects
-Edit button,
+Inline edit button,
 Order Form,
 Navigation,
 Search Filter
